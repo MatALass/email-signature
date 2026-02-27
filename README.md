@@ -53,16 +53,14 @@ This is email-engineered HTML.
 
 ## Preview
 
-### Full Version
+### Gmail
+![Gmail](assets/screenshots/gmail.png)
 
-![Full Signature](assets/screenshots/full.png)
+### Outlook Web
+![Outlook Web](assets/screenshots/outlook-web.png)
 
-### Compact Version
-
-![Compact Signature](assets/screenshots/min.png)
-
-(Add your screenshots inside `assets/screenshots/` and update filenames
-if needed.)
+### Outlook Desktop
+![Outlook Desktop](assets/screenshots/outlook-desktop.png)
 
 ------------------------------------------------------------------------
 
