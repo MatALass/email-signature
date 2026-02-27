@@ -5,41 +5,44 @@ Compatible](https://img.shields.io/badge/outlook-compatible-lightgrey)
 
 # email-signature
 
-A **production-ready, email-client-safe HTML signature template**\
-designed to render consistently across:
+A production-ready, email-client-safe HTML signature template\
+engineered to render consistently across:
 
 -   Gmail (Web)
 -   Outlook Web
 -   Outlook Desktop (Word rendering engine)
 -   Apple Mail
 
-Built using strict **email HTML best practices**: - Tables only (no div
-layouts) - Inline styles only - No JavaScript - No external CSS -
-Outlook-safe spacing rules (`mso-*` compatible)
+Built using strict email HTML best practices:
+
+-   Table-based layout
+-   Inline styles only
+-   No JavaScript
+-   No external CSS
+-   Outlook-safe spacing handling (`mso-*` compatible)
 
 ------------------------------------------------------------------------
 
 ## Why this project exists
 
-Modern CSS does not work reliably in email clients.\
-Outlook desktop uses Microsoft Word as its rendering engine.
+Modern CSS does not render reliably inside email clients.
 
-This project provides a **minimal, robust, and portable signature
-layout** that:
+Outlook Desktop uses Microsoft Word as its rendering engine.\
+Most layout systems (flexbox, grid, floats) fail in email environments.
 
--   does not break in Outlook
--   does not rely on remote CSS
--   does not use unsupported modern layout systems (flex/grid)
--   remains visually clean and professional
+This project provides:
 
-This is not just HTML.\
-This is **email-engineered HTML**.
+-   A minimal, robust layout
+-   A compatibility-first structure
+-   A professional design that does not break
+
+This is email-engineered HTML.
 
 ------------------------------------------------------------------------
 
 ## Features
 
--   Clean two-column layout
+-   Clean two-column identity layout
 -   Short visual divider (design-focused)
 -   Hosted icons via GitHub Pages
 -   Copy/paste ready templates
@@ -48,45 +51,60 @@ This is **email-engineered HTML**.
 
 ------------------------------------------------------------------------
 
-## Project structure
+## Preview
+
+### Full Version
+
+![Full Signature](assets/screenshots/full.png)
+
+### Compact Version
+
+![Compact Signature](assets/screenshots/min.png)
+
+(Add your screenshots inside `assets/screenshots/` and update filenames
+if needed.)
+
+------------------------------------------------------------------------
+
+## Project Structure
 
     email-signature/
     │
     ├── templates/
-    │   ├── signature.html        # Main version
-    │   └── signature.min.html    # Compact version
+    │   ├── signature.html
+    │   └── signature.min.html
     │
     ├── demo/
-    │   └── index.html            # Preview page (GitHub Pages)
+    │   └── index.html
     │
     ├── assets/
-    │   └── icons/                # Hosted icon assets
+    │   ├── icons/
+    │   └── screenshots/
     │
     ├── docs/
     │   ├── COMPATIBILITY.md
     │   └── PRIVACY.md
     │
+    ├── CONTRIBUTING.md
+    ├── LICENSE
     └── README.md
 
 ------------------------------------------------------------------------
 
-## Quick start
+## Quick Start
 
-### Enable GitHub Pages (for icon hosting)
+### 1. Enable GitHub Pages
 
-GitHub repo → **Settings → Pages**
+Settings → Pages\
+Deploy from branch → `main` → `/root`
 
--   Source: Deploy from a branch\
--   Branch: `main`\
--   Folder: `/root`
-
-Your hosted icons will be accessible at:
+Icons will be available at:
 
     https://<USERNAME>.github.io/<REPO>/assets/icons/email.png
 
 ------------------------------------------------------------------------
 
-### Customize the template
+### 2. Customize the Template
 
 Open:
 
@@ -104,100 +122,50 @@ Replace:
 
 Ensure icon URLs match your GitHub Pages deployment.
 
-Example:
-
-    https://matalass.github.io/email-signature/assets/icons/email.png
-
 ------------------------------------------------------------------------
 
-### Paste into your email client
+### 3. Paste into Your Email Client
 
-Important: Paste the **rendered HTML**, not the raw source code.
+Important: paste the rendered signature, not the raw HTML.
 
-#### Gmail
+Gmail:\
+Settings → General → Signature → Create new → Paste
 
-Settings → See all settings → General → Signature → Create new → Paste
-
-#### Outlook (Web)
-
+Outlook Web:\
 Settings → Mail → Compose and reply → Email signature → Paste
-
-------------------------------------------------------------------------
-
-## Preview
-
-Open:
-
-    demo/index.html
-
-via GitHub Pages to validate rendering before pasting.
 
 ------------------------------------------------------------------------
 
 ## Compatibility
 
-Tested layout principles:
-
--   Table-based structure
--   Explicit widths
--   Inline typography
--   No CSS classes
--   No margin collapse dependency
--   Outlook-safe line height handling
-
 See:
 
     docs/COMPATIBILITY.md
 
-for detailed constraints.
+For detailed client constraints and testing workflow.
 
 ------------------------------------------------------------------------
 
-## Customization guidelines
-
-When modifying the layout:
-
-✔ Keep tables\
-✔ Keep inline styles\
-✔ Avoid flexbox, grid, position, float\
-✔ Avoid web fonts\
-✔ Test in Outlook Desktop
-
-Email HTML is not browser HTML.
-
-------------------------------------------------------------------------
-
-## Privacy considerations
-
-Publishing phone numbers or personal email addresses in public
-repositories may increase:
-
--   Spam
--   Scraping
--   Targeted phishing
-
-Consider using: - Alias email - Contact page - Reduced public contact
-exposure
+## Privacy Considerations
 
 See:
 
     docs/PRIVACY.md
 
+Before publishing personal contact details.
+
 ------------------------------------------------------------------------
 
 ## Contributing
 
-Contributions are welcome, but must respect email-client constraints.
+See:
 
-Before submitting a PR:
+    CONTRIBUTING.md
 
--   Test in Gmail and Outlook
--   Keep layout table-based
--   Avoid modern CSS
--   Preserve minimal, professional design
+Pull requests must respect email-client compatibility rules.
 
 ------------------------------------------------------------------------
 
 ## License
 
-MIT --- free to use, modify, and adapt.
+MIT License
