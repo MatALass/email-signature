@@ -72,9 +72,6 @@ This is email-engineered HTML.
     │   ├── signature.html
     │   └── signature.min.html
     │
-    ├── demo/
-    │   └── index.html
-    │
     ├── assets/
     │   ├── icons/
     │   └── screenshots/
@@ -86,6 +83,7 @@ This is email-engineered HTML.
     ├── CONTRIBUTING.md
     ├── LICENSE
     └── README.md
+    └── index.html
 
 ------------------------------------------------------------------------
 
